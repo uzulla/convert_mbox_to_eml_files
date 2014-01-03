@@ -28,6 +28,10 @@ while($line = fgets($fh)){
     if(preg_match('/^From /', $line)){
         if($counter++ % 100 === 0)
             echo '.';
+
+        if(isset($oh)&&$oh)
+            fclose($oh);
+
         // start segment. create new file.
         $oh = new_output_file_handle($line, $to_dir);
 
