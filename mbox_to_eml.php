@@ -47,6 +47,7 @@ while($line = fgets($fh)){
         fwrite($oh, $line);
     }
 }
+echo PHP_EOL."create {$counter} eml files.".PHP_EOL;
 
 function new_output_file_handle($line, $prefix_dir='./'){
     $list = preg_split('/ /', $line, 3);
