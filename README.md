@@ -28,7 +28,7 @@ usage
 
 ```
 mkdir ~/many_eml_file/
-php mbox_to_eml.php ~/Downloads/aaaa.mbox ~/many_eml_file/ 0
+php mbox_to_eml.php ~/Downloads/aaaa.mbox ~/many_eml_file/
 ```
 
 and...
