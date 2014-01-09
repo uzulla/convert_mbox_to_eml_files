@@ -1,7 +1,7 @@
 mbox file to eml files converter.
 ================================
 
-Split huge mbox file(giga byte)  to many .eml file.
+Split huge mbox file(giga byte)  to many .eml (.emlx) file.
 
 why?
 ----
@@ -19,7 +19,7 @@ so, I made this.
 requiment
 ---------
 
-- PHP cli (really, is not joke)
+- PHP cli (really, It is not joke)
 
 tested with 5.5.7. over 6 giga byte file. relax.
 
@@ -41,6 +41,20 @@ for Google TakeOut's output mbox, require option below. (reason will be mentione
 mkdir ~/many_eml_file/
 php mbox_to_eml.php ~/Downloads/aaaa.mbox ~/many_eml_file/ 2
 ```
+
+for osx spotlight
+-----------------
+
+osx spotlight indexing not support .eml, must use .emlx.
+
+if you want .emlx, set 4th arg = 1.
+
+```
+mkdir ~/many_eml_file/
+php mbox_to_eml.php ~/Downloads/aaaa.mbox ~/many_eml_file/ 2 1
+```
+
+(added meta data is dummy(blank). but i can search by spotlight with 10.9(mavericks) .)
 
 hey google!
 ==========
